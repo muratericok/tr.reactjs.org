@@ -17,7 +17,7 @@ Bu öğretici, herhangi bir React bilginizin olmadığını varsayar.
 
 ## Öğreticiye Başlamadan Önce {#before-we-start-the-tutorial}
 
-Bu öğreticide küçük bir oyun geliştireceğiz. **Oyun geliştiricisi olmadığınızdan dolayı bu öğreticiyi atlamak istiyor olabilirsiniz -- ama bir şans vermeniz iyi olacaktır.** Zira bu öğreticide edineceğiniz teknikler herhangi bir React uygulaması geliştirmek için temel niteliğindedir, ve bu temeller üzerinde uzmanlaşmak React'i daha derinlemesine öğrenmenizi sağlayacaktır.
+Bu öğreticide küçük bir oyun geliştireceğiz. **Oyun geliştiricisi olmadığınızdan dolayı bu öğreticiyi atlamak isteyebilirsiniz -- ama bir şans vermeniz iyi olacaktır.** Zira bu öğreticide edineceğiniz teknikler herhangi bir React uygulaması geliştirmek için temel niteliğindedir, ve bu temeller üzerinde uzmanlaşmak React'i daha derinlemesine öğrenmenizi sağlayacaktır.
 
 >Not:
 >
@@ -38,9 +38,9 @@ Bu öğreticiyi takip ederken kodları kopyala-yapıştır yaparak denemenizde b
 
 Bu öğreticide, React ile bir tic-tac-toe (XOX oyunu) nasıl geliştirilir onu göstereceğiz. 
 
-**[Buradan](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)** oyunun son halini görebilirsiniz. Eğer bu kodlara aşina değilseniz ve size karışık geliyorsa endişelenmeyin. Çünkü bu öğreticinin amacı, React'in ve React'teki kod yapısının anlaşılmasında size yardımcı olmaktır. 
+**[Buradan](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)** oyunun son halini görebilirsiniz. Eğer bu kodlara aşina değilseniz ve size karışık geliyorsa endişelenmeyin. Çünkü bu öğreticinin amacı, React'in ve React'teki kod yapısının anlaşılmasında size yardım etmektir. 
 
-Bu öğreticiye başlamadan önce, yukarıda belirttiğimiz linke giderek oyunu oynamanızı ve incelemenizi tavsiye ediyoruz. Oyunu oynadığınızda farkedeceğiniz gibi; oyun tahtasının sağında, numaralandırılmış bir liste bulunmaktadır. Bu liste size, oyunda oluşan hamlelerin bir geçmişini sunar ve oyunda ilerledikçe liste de otomatik olarak güncellenir.
+Bu öğreticiye başlamadan önce, yukarıda belirttiğimiz linke giderek oyunu oynamanızı ve incelemenizi öneriyoruz. Oyunu oynadığınızda farkedeceğiniz gibi; oyun tahtasının sağında, numaralandırılmış bir liste bulunmaktadır. Bu liste size, oyunda oluşan hamlelerin bir geçmişini sunar ve oyunda ilerledikçe liste de otomatik olarak güncellenir.
 
 Oyunu inceledikten sonra ilgili sayfayı kapatabilirsiniz. Çünkü bu öğreticiye sıfırdan bir şablonla başlayacağız. 
 
@@ -50,7 +50,7 @@ Gelin şimdi oyunu kodlamak için gereken geliştirme ortamının kurulumuna de�
 
 Bu öğreticide, HTML ve JavaScript'i az-çok bildiğinizi varsayacağız. Fakat herhangi bir programlama dilinden gelseniz bile aşamaları takip edebilirsiniz. Ayrıca temel programlama konseptleri olan fonksiyonlara, nesnelere, dizilere ve az da olsa sınıflara aşina olduğunuzu varsayıyoruz.
 
-Eğer JavaScript hakkında bilgi edinmeniz gerekiyorsa, [bu rehberi](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) okumanızı tavsiye ederiz. JavaScript'in en güncel versiyonu olan ES6 (EcmaScript 6)'dan bazı özellikleri kullanacağız. Bu öğreticide de hepsi birer ES6 özelliği olan [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), ve [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) ifadelerini kullanıyor olacağız. ES6, henüz her tarayıcı tarafından tam olarak desteklenmediği için [Babel REPL](babel://es5-syntax-example)'ı kullanarak ES6 kodunun derlenmiş halini görebilirsiniz.
+Eğer JavaScript hakkında bilgi edinmeniz gerekiyorsa, [bu rehberi](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) okumanızı tavsiye ederiz. JavaScript'in en güncel versiyonu olan ES6 (EcmaScript 6)'dan bazı özellikleri kullanacağız. Bu öğreticide de hepsi birer ES6 özelliği olan [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), ve [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) ifadelerini kullanacağız. ES6, henüz her tarayıcı tarafından tam olarak desteklenmediği için [Babel REPL](babel://es5-syntax-example)'ı kullanarak ES6 kodunun derlenmiş halini görebilirsiniz.
 
 ## Öğretici İçin Kurulum {#setup-for-the-tutorial}
 
@@ -60,7 +60,7 @@ Bu öğreticiyi tamamlamanın iki yolu bulunmaktadır: kodu tarayıcınızda yaz
 
 Başlamanız için en kolay olan yöntemdir.
 
-Öncelikle, buradaki **[başlangıç kodunu](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)** yeni sekmede açınız. Yeni sekme, React kodu ile birlikte boş bir tic-tac-toe oyununu görüntülüyor olacaktır. Bu öğreticide React kodunu düzenliyor olacağız.
+Öncelikle, buradaki **[başlangıç kodunu](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)** yeni sekmede açınız. Yeni sekme, React kodu ile birlikte boş bir tic-tac-toe oyununu görüntülüyor olacaktır. Bu öğreticide React kodunu düzenleyeceğiz.
 
 Bu seçeneği tercih ediyorsanız, ikinci seçeneği es geçebilir, ve [Genel bakış](#overview) bölümüne giderek genel bilgi edinebilirsiniz.
 
@@ -118,15 +118,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 ```
 
-Artık projeyi çalıştırabilirsiniz. Konsolda proje dizinindeyken `npm start` komutunu girdiğinizde, tarayıcıda `http://localhost:3000` url'i açılacak ve devamında boş bir tic-tac-toe oyunu görüyor olacaksınız.
+Artık projeyi çalıştırabilirsiniz. Konsolda proje dizinindeyken `npm start` komutunu girdiğinizde, tarayıcıda `http://localhost:3000` url'i açılacak ve devamında boş bir tic-tac-toe oyunu göreceksiniz.
 
-Metin editörünüzde, kodun renkli halde görüntülenmesini sağlamak için [buradaki yönergeleri](https://babeljs.io/docs/editors/) izlemenizi tavsiye ederiz.
+Metin editörünüzde, kodun renkli halde görüntülenmesini sağlamak için [buradaki yönergeleri](https://babeljs.io/docs/editors/) izlemenizi öneririz.
 
 </details>
 
 ### Takıldım, Yardım Edin! {#help-im-stuck}
 
-Eğer bu öğreticiyi takip ederken herhangi bir yerde takıldıysanız, [topluluk destek kaynaklarına](/community/support.html) bakınız. Özellikle Discord'da yer alan [Reactiflux Chat](https://discord.gg/reactiflux) kanalı, hızlıca yardım almak için oldukça elverişlidir. Eğer bir cevap alamadıysanız veya hala takıldığınız için devam edemiyorsanız lütfen bize GitHub üzerinden issue açınız. Devamında size yardımıcı olacağız.
+Eğer bu öğreticiyi takip ederken herhangi bir yerde takıldıysanız, [topluluk destek kaynaklarına](/community/support.html) bakınız. Özellikle Discord'da yer alan [Reactiflux Chat](https://discord.gg/reactiflux) kanalı, hızlıca yardım almak için oldukça elverişlidir. Eğer bir cevap alamadıysanız veya hala takıldığınız için devam edemiyorsanız lütfen bize GitHub üzerinden issue açınız. Devamında size yardım edeceğiz.
 
 ## Genel Bakış {#overview}
 
@@ -1160,9 +1160,9 @@ Notice in `jumpTo` method, we haven't updated `history` property of the state. T
 
 Şimdi, oyundaki bir kareye tıklandığında çağrılan `handleClick` metodunda birkaç değişiklik yapalım. 
 
-Artık eklediğimiz `stepNumber` değişkeni, kullanıcının mevcut hamlesini gösteriyor. Yeni bir hamle yaptıktan sonra, `stepNumber` değerini güncellememiz için `this.setState()` çağrısına `stepNumber: history.length`'i eklememiz gerekiyor. Bu sayede, yeni bir hamle yapıldıktan sonra, sürekli aynı hamleyi görüntülemekten dolayı oluşan takılmayı engellemiş oluyoruz.
+Artık eklediğimiz `stepNumber` değişkeni, kullanıcının mevcut hamlesini gösteriyor. Yeni bir hamle yaptıktan sonra, `stepNumber` değerini güncellememiz için `this.setState()` çağrısına `stepNumber: history.length`'i eklememiz gerekiyor. Bu sayede, yeni bir hamle yapıldıktan sonra, sürekli aynı hamleyi görüntülemekten dolayı oluşan takılmayı engelliyoruz.
 
-Ayrıca oyun geçmişine atama yapmak için `this.state.history` yerine `this.state.history.slice(0, this.state.stepNumber + 1)` yazacağız. Bu sayede, "zamanda geriye döndüğümüzde" o noktadan devam edebileceğiz, ve gelecekte yaptığımız hamleler işe yaramaz hale geleceğinden dolayı bu hamlelerin de `slice()` ile oyun tahtasından atılmasını sağlamış olacağız:
+Ayrıca oyun geçmişine atama yapmak için `this.state.history` yerine `this.state.history.slice(0, this.state.stepNumber + 1)` yazacağız. Bu sayede, "zamanda geriye döndüğümüzde" o noktadan devam edebileceğiz, ve gelecekte yaptığımız hamleler işe yaramaz hale geleceğinden dolayı bu hamlelerin de `slice()` ile oyun tahtasından atılmasını sağlayacağız:
 
 ```javascript{2,13}
   handleClick(i) {
